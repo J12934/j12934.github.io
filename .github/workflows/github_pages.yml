@@ -1,0 +1,14 @@
+name: "Deploy Github Page"
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: enriikke/gatsby-gh-pages-action@6f11d33d3ef1c31d7962f855e73d4fdcf0dcb8b7
+      secrets:
+        - ACCESS_TOKEN
